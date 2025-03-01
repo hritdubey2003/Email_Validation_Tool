@@ -1,12 +1,65 @@
-# React + Vite
+# 🚀 Email Validator & Extractor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+This is a React-based email validation and extraction tool with smooth animations powered by Framer Motion. It features a rocket-themed loading screen and ensures accurate email validation using regex and domain checks.
 
-Currently, two official plugins are available:
+## 🛠 Features
+- ✅ **Email Extraction**: Extracts valid emails from pasted text or uploaded files.
+- 📩 **Email Validation**: Checks if an email is properly formatted and valid.
+- 🚀 **Framer Motion Animations**: Smooth UI transitions and a cool rocket loader.
+- 🎨 **Modern UI/UX**: Built with TailwindCSS for a sleek design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack
+- **Frontend:** React.js, JavaScript, Redux, TailwindCSS
+- **Animations:** Framer Motion
+- **Email Validation:** Regex, Domain lookup (optional for future improvements)
 
-## Expanding the ESLint configuration
+## 🏗 Installation
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/email-validator.git
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Navigate to the project folder
+cd email-validator
+
+# Install dependencies
+npm install  # or yarn install
+
+# Start the development server
+npm run dev  # or yarn dev
+```
+
+## 🚀 Usage
+1. Open the app in your browser (`http://localhost:3000`).
+2. Paste text or upload a file to extract emails.
+3. See validation results instantly with animations.
+
+## 🛠 API & Functionality
+- Uses **Regex** for basic validation.
+- Future updates may include **MX record lookup** for deeper validation.
+
+## 📌 Folder Structure
+```
+📂 email-validator
+├── 📁 src
+│   ├── 📂 components       # Reusable UI components
+│   ├── 📂 hooks            # Custom React hooks
+│   ├── 📂 utils            # Helper functions (email extraction, validation)
+│   ├── App.jsx            # Main application
+│   ├── index.jsx          # Entry point
+│   └── styles.css         # TailwindCSS styles
+├── 📄 package.json        # Dependencies & scripts
+├── 📄 README.md           # Project documentation
+└── 📄 .gitignore          # Ignored files
+```
+
+## 💡 Future Improvements
+- [ ] **Real-time domain verification** (MX lookup, SMTP ping)
+- [ ] **Bulk email validation** for large datasets
+- [ ] **Dark mode UI**
+
+## 📜 License
+This project is open-source and available under the MIT License.
+
+## 📞 Contact
+For issues, reach out via [GitHub Issues](https://github.com/yourusername/email-validator/issues).
