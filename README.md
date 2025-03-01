@@ -30,7 +30,7 @@ npm run dev  # or yarn dev
 ```
 
 ## 🚀 Usage
-1. Open the app in your browser (`http://localhost:3000`).
+1. Open the app in your browser (`http://localhost:5173`).
 2. Paste text or upload a file to extract emails.
 3. See validation results instantly with animations.
 
