@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer.jsx";
 
 
 function Homepage() {
@@ -135,6 +136,7 @@ function Homepage() {
           </Link>
         </motion.div>
       </div>
+      <Footer />
     </>
   );
 }

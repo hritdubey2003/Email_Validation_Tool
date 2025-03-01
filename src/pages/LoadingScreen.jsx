@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const RocketAnimation = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/dashboard");
+    }, 15000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <div className="relative w-full h-screen bg-gradient-to-b from-black to-blue-900 flex items-center justify-center overflow-hidden">
       {/* Stars Background */}
@@ -26,67 +36,32 @@ const RocketAnimation = () => {
       </motion.div>
 
       {/* Alien Messages */}
-      <motion.div
-        className="absolute top-20 left-10 p-4 bg-green-600 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
+      <motion.div className="absolute top-20 left-10 p-4 bg-green-600 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
         👽 "Hey humans! Still searching for life? We’ve been here partying for eons!"
       </motion.div>
 
-      <motion.div
-        className="absolute bottom-40 left-10 p-4 bg-purple-700 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 3 }}
-      >
+      <motion.div className="absolute bottom-40 left-10 p-4 bg-purple-700 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 3 }}>
         🚀 "Wait, what?! You guys exist? Are you on Google Maps?"
       </motion.div>
 
-      <motion.div
-        className="absolute bottom-32 right-10 p-4 bg-green-500 text-black rounded-lg shadow-lg text-lg font-semibold max-w-xs"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 5 }}
-      >
+      <motion.div className="absolute bottom-32 right-10 p-4 bg-green-500 text-black rounded-lg shadow-lg text-lg font-semibold max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 5 }}>
         👾 "Haha, nah! But our delivery service is faster than yours. Wanna order a space pizza?"
       </motion.div>
 
-      <motion.div
-        className="absolute bottom-24 left-10 p-4 bg-blue-500 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 7 }}
-      >
+      <motion.div className="absolute bottom-24 left-10 p-4 bg-blue-500 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 7 }}>
         🚀 "Wait… Do you guys have Wi-Fi? Asking for a friend."
       </motion.div>
 
-      <motion.div
-        className="absolute bottom-16 right-10 p-4 bg-yellow-500 text-black rounded-lg shadow-lg text-lg font-semibold max-w-xs"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 9 }}
-      >
+      <motion.div className="absolute bottom-16 right-10 p-4 bg-yellow-500 text-black rounded-lg shadow-lg text-lg font-semibold max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 9 }}>
         👽 "Of course! But it's quantum-speed. You might accidentally download the future."
       </motion.div>
 
-      <motion.div
-        className="absolute bottom-10 left-10 p-4 bg-red-600 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 11 }}
-      >
+      <motion.div className="absolute bottom-10 left-10 p-4 bg-red-600 text-white rounded-lg shadow-lg text-lg font-semibold max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 11 }}>
         🚀 "Awesome! Now I just need to figure out how to explain this to NASA…"
       </motion.div>
 
       {/* Launch Text */}
-      <motion.h1
-        className="absolute bottom-5 w-full text-center text-white text-3xl font-bold"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 13 }}
-      >
+      <motion.h1 className="absolute bottom-5 w-full text-center text-white text-3xl font-bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 13 }}>
         Rocket Launching... 🚀 (Still waiting for email verification... Maybe by the time we reach Mars?)
       </motion.h1>
     </div>
@@ -94,3 +69,5 @@ const RocketAnimation = () => {
 };
 
 export default RocketAnimation;
+// Just for the sake of interests was learning this!
+// Mazedaar hai! Timing rakha isiliye!
