@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <nav className="bg-cyan-600 p-4 text-white shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold" onClick={() => window.location.reload()}>Email Validator</h1>
+        <h1 className="text-2xl font-bold">Email Validator</h1>
         <div className="space-x-4 mx-7">
           <Dropdown trigger={<button>Menu</button>}>
             <DropdownItem><img 
